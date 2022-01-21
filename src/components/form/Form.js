@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function FormSpends() {
+function FormSpends({ addSpend }) {
     const [values, setValues] = useState({
         nameSpend: '',
         amountSpend: ''
@@ -16,12 +16,7 @@ function FormSpends() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values)
-        setValues({
-            nameSpend: '',
-            amountSpend:''
-        })
-        
+        addSpend(values)
     }
 
     return(
