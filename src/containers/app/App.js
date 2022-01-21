@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import FormSpend from '../../components/form/Form'
+import List from "../../components/list/List";
+
 function App() {
   const [costs, setCosts] = useState({
     budget: '',
@@ -12,9 +14,8 @@ function App() {
   const addSpend = (spend) => {
     const cost = {...costs.cost};
     cost[`gasto${Date.now()}`] = spend;
-    console.log(cost)
+    // console.log(cost)
     setCosts({
-      ...costs,
       cost
     })
   }
@@ -37,7 +38,9 @@ function App() {
               />
             </div>
             <div className="col-4">
-              One of two columns
+              <List 
+                cost = {costs.cost}
+              />
             </div>
         </div>
         
