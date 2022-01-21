@@ -1,22 +1,22 @@
 import React from "react";
 import Header from "../../components/header/Header";
-
+import FormSpend from '../../components/form/Form'
 function App() {
   return (
-    <div class='container-fluid bg-danger' >
-      <div class="container  bg-light ">
-          <div class="row justify-content-center  text-center">
+    <div className='container-fluid bg-danger' >
+      <div className="container  bg-light ">
+          <div className="row justify-content-center  text-center">
             <div>
               <Header 
                 titulo='Gasto Semanal'
                 />
             </div>
           </div>
-          <div class="row justify-content-center text-center">
-            <div class="col-4">
-              One of two columns
+          <div className="row justify-content-center">
+            <div className="col-4">
+              <FormSpend />
             </div>
-            <div class="col-4">
+            <div className="col-4">
               One of two columns
             </div>
         </div>
