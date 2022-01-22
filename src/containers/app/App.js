@@ -31,11 +31,25 @@ function App() {
   }
 
   const addSpend = (spend) => {
-    const cost = {...costs.cost};
+    const cost = costs.cost
     cost[`gasto${Date.now()}`] = spend;
     setCosts({
+      ...costs,
       cost
     })
+    substractBudget(spend.amountSpend)
+  }
+
+  const substractBudget = (amount) => {
+    let substract = Number(amount)
+    let remaining = costs.remaining;
+    remaining = remaining - substract;
+    setCosts({
+      ...costs,
+      remaining
+    })
+    console.log(remaining)
+
   }
 
 
