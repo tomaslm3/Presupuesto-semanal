@@ -14,7 +14,6 @@ function App() {
   const addSpend = (spend) => {
     const cost = {...costs.cost};
     cost[`gasto${Date.now()}`] = spend;
-    // console.log(cost)
     setCosts({
       cost
     })
