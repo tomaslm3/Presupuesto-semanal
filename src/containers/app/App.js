@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import FormSpend from '../../components/form/Form'
 import List from "../../components/list/List";
 import { validateBudget } from '../../helper/helper'
-
+import ControlBudget from "../../components/controlBudget/ControlBudget";
 function App() {
   const [costs, setCosts] = useState({
     budget: '',
@@ -58,6 +58,10 @@ function App() {
             <div className="col-4">
               <List 
                 cost = {costs.cost}
+              />
+              <ControlBudget
+                budget = {costs.budget}
+                remaining = {costs.remaining}
               />
             </div>
         </div>
