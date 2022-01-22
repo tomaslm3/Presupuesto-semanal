@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import FormSpend from '../../components/form/Form'
 import List from "../../components/list/List";
+import { validateBudget } from '../../helper/helper'
 
 function App() {
   const [costs, setCosts] = useState({
@@ -10,6 +11,24 @@ function App() {
     cost: {}
   });
 
+  useEffect(() => {
+    getBudget();
+  }, []) 
+
+  const getBudget = () => {
+    let budget = prompt('How much is your budget?')
+    
+    let result = validateBudget(budget)
+    if(result) {
+      setCosts({
+        ...costs,
+        budget: budget,
+        remaining: budget
+      })
+    } else {
+      getBudget();
+    }
+  }
 
   const addSpend = (spend) => {
     const cost = {...costs.cost};
