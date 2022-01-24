@@ -1,9 +1,13 @@
 import React from "react";
+import { checkBudget } from '../../helper/helper'
 
-function Remaining({ remaining }) {
+function Remaining({ remaining, budget }) {
+     budget = budget;
+     remaining = remaining;
+
     return ( 
-        <div className="alert alert-success">
-            Remaining: $ {remaining}
+        <div className={checkBudget(budget, remaining)}>
+            Restante: $ {remaining}
         </div>
     )
 }

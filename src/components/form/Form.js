@@ -17,12 +17,16 @@ function FormSpends({ addSpend }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         addSpend(values)
+        setValues({
+        nameSpend: '',
+        amountSpend: ''
+        })
     }
 
     return(
         <form onSubmit={handleSubmit}>
 
-        <h2>Agrega tus gastos aqui</h2>
+        <h2 className="display-6">Agrega tus gastos aqui:</h2>
         
         <div className="mb-3">
             <label htmlFor="Name Spend" className="form-label">Nombre Gasto</label>
@@ -33,7 +37,10 @@ function FormSpends({ addSpend }) {
             < input type='text' className="form-control" name="amountSpend" value={values.amountSpend} onChange={handleChange} placeholder="Ej: 300"></input>
         </div>
             <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn btn-primary" type="submit">Agregar</button>
+            <button className="btn btn-primary" type="submit" style={{
+                backgroundColor: '#565264',
+                borderStyle: 'none'
+            }}>Agregar</button>
         </div>
         </form>
     )

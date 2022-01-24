@@ -9,6 +9,7 @@ function ControlBudget({ budget, remaining }) {
                 budget = {budget}
             />
             <Remaining
+                budget = {budget}
                 remaining = {remaining}
             />
         </React.Fragment>
