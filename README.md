@@ -2,7 +2,7 @@
 
 ## Introduction
 
-El Control de Gastos Semanales es un proyecto que ayudara al usuario a llevar un registro ordenado de sus gastos por semana en base a su presupuesto indicado, y con una ayuda visiual incluida que  cambia de color dependio del total gastado. Utiliza React para el manejo de estados y los estilos estan creados con Bootstrap.
+El Control de Gastos Semanales es un proyecto que ayudara al usuario a llevar un registro ordenado de sus gastos por semana en base a su presupuesto indicado, y con una ayuda visual incluida que  cambia de color dependio del total gastado. Utiliza React para el manejo de estados y los estilos estan creados con Bootstrap.
 
 ## Para Probar el proyecto
 
